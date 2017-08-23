@@ -1,0 +1,67 @@
+  <!doctype html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8" />
+      <title>心阅</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+     		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+     <link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+     <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+     <link rel="stylesheet" href="css/swiper.min.css" /> 
+      <script type="text/javascript" src="js/swiper.min.js" ></script>
+  </head>
+  
+  <body>
+  	
+  	<header class="mui-bar mui-bar-nav" style="background-color: #EB413D">
+            <a  href="home.html"><span class="mui-icon mui-action-menu mui-icon-undo mui-pull-left" style="background:#DD524D;"></span></a>
+            <h1 class="mui-title">搜索</h1>
+          </header>
+   <br />
+   <br /><br /><h5>一词一世界 :</h5>
+  
+   <div class="mui-input-row mui-search">
+    
+    <input type="search" class="mui-input-clear " placeholder="请输入想搜索的新闻关键词" style="width: 80%;"> <button type="button" class="mui-btn mui-btn-primary" >确认</button>
+    
+    </div>
+    近期热词
+  <hr />  
+    <button type="button" class="mui-btn mui-btn-outlined">点外卖被骑手偷吃 hot</button>
+<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">妈带儿进女儿更衣室</button>
+<br />
+<br /><button type="button" class="mui-btn mui-btn-warning">台风洛克登陆</button><br />
+<button type="button" class="mui-btn">巴士拒载中国游客</button>
+<button type="button" class="mui-btn mui-btn-primary">切尔西球员辱华</button><br />
+<br />
+<br /><button type="button" class="mui-btn mui-btn-success">搞错快件下跪道歉</button>   
+<button type="button" class="mui-btn mui-btn-success mui-btn-outlined">李晨探班范冰冰</button>
+<button type="button" class="mui-btn mui-btn-warning mui-btn-outlined">吴京儿子亮相</button>
+<br />
+<br /><button type="button" class="mui-btn mui-btn-danger">孙杨夺冠</button><br />
+<button type="button" class="mui-btn mui-btn-royal">陆良饵丝好吃</button> 
+<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined">含笑有白鹭</button>
+<button type="button" class="mui-btn mui-btn-royal mui-btn-outlined">在路上</button>   
+      
+      
+      <script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+      <script type="text/javascript">
+      mui.init()
+      (function($) {
+				$(".mui-scroll-wrapper").scroll({
+					bounce: false, //滚动条是否有弹力默认是true
+					indicators: false, //是否显示滚动条,默认是true
+				});
+			})(mui);
+			
+      //获得slider插件对象
+var gallery = mui('.mui-slider');
+gallery.slider({
+  interval:2000//自动轮播周期，若为0则不自动播放，默认为0；
+});
+
+
+      </script>
+  </body>
+  </html>

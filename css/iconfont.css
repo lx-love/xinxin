@@ -1,0 +1,46 @@
+      @font-face {font-family: "iconfont";
+        src:url('../fonts/iconfont.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    }
+      
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dutoutiao:before { content: "\e60c"; }
+
+.icon-lanmusousuo:before { content: "\e610"; }
+
+.icon-dujiazhuanqu:before { content: "\e607"; }
+
+.icon-socialcontant-alt:before { content: "\e624"; }
+
+.icon-gentie:before { content: "\e60b"; }
+
+.icon-tiyu:before { content: "\e60e"; }
+
+.icon-gongyi01:before { content: "\e638"; }
+
+.icon-wode-:before { content: "\e617"; }
+
+.icon-dujia:before { content: "\e6c2"; }
+
+.icon-lvyou:before { content: "\e625"; }
+
+.icon-shouye:before { content: "\e602"; }
+
+.icon-junshi:before { content: "\e603"; }
+
+.icon-yishu:before { content: "\e600"; }
+
+.icon-Kunming_Metro_Logo:before { content: "\e626"; }
+
+.icon-dingyue:before { content: "\e616"; }
+
+.icon-lanmuzengjia:before { content: "\e64e"; }
+
+.icon-xihuan:before { content: "\e75f"; }
+

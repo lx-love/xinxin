@@ -1,0 +1,26 @@
+
+       @font-face {font-family: "iconfont";
+        src:url('../fonts/iconfont1.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    }
+      
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logo:before { content: "\e603"; }
+
+.icon-web:before { content: "\e607"; }
+
+.icon-it:before { content: "\e61f"; }
+
+.icon-php:before { content: "\e600"; }
+
+.icon-java:before { content: "\e606"; }
+
+.icon-js:before { content: "\e608"; }
+

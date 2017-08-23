@@ -1,0 +1,1380 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>心阅</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont1.css" />
+		<link rel="stylesheet" href="css/animate.min.css" />
+		<link rel="stylesheet" href="css/swiper-3.4.2.min.css" />
+		<link href="css/163css.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" language="javascript" src="js/zepto.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+		<style type="text/css">
+			li {
+				list-style-type: none;
+			}
+			
+			h5 {
+				padding-top: 8px;
+				padding-bottom: 8px;
+				text-indent: 12px;
+			}
+			
+			.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body {
+				font-size: 15px;
+				margin-top: 8px;
+				color: #333;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<!-- 主界面不动、菜单移动 -->
+		<!-- 侧滑导航根容器 -->
+		<div class="mui-off-canvas-wrap  mui-slide-in">
+			<!-- 菜单容器 -->
+			<aside class="mui-off-canvas-right" id="offCanvasSide">
+				<div class="mui-scroll-wrapper" style="background: whitesmoke;">
+					<div class="mui-scroll">
+						<!-- 菜单具体展示内容 -->
+						<header class="mui-bar mui-bar-nav" style="background-color: #CF2D28" id="header">
+							<a href="home.html"><span class="mui-icon mui-action-menu mui-icon-undo mui-pull-left" style="background:#DD524D;"></span></a>
+							<h1 class="mui-title">设置</h1>
+						</header>
+						<br />
+						<br /><br />
+						<h5>账号设置</h5>
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">个人设置</li>
+							<li class="mui-table-view-cell">绑定其他平台</li>
+
+						</ul>
+						<hr />
+						<h5>系统设置</h5>
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">栏目插件设置</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">字体设置</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">阅读偏好</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">正文字号</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<span>要闻推送</span>
+								<div class="mui-switch mui-active">
+									<div class="mui-switch-handle"></div>
+								</div>
+							</li>
+							<li class="mui-table-view-cell">
+								<span>订阅推送</span>
+								<div class="mui-switch mui-active">
+									<div class="mui-switch-handle"></div>
+								</div>
+							</li>
+							<li class="mui-table-view-cell">
+								<span>头条集卡</span>
+								<div class="mui-switch mui-active">
+									<div class="mui-switch-handle"></div>
+								</div>
+							</li>
+							<li class="mui-table-view-cell">
+								<span>非WIFI下不加载图片</span>
+								<div class="mui-switch mui-switch-mini">
+									<div class="mui-switch-handle"></div>
+								</div>
+							</li>
+						</ul>
+						<br />
+						<hr />
+
+						<ul class="mui-table-view">
+							<a href="about.html">
+								<li class="mui-table-view-cell">关于</li>
+							</a>
+
+						</ul>
+
+					</div>
+				</div>
+			</aside>
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav  " style="background-color:#EB413D" id="zhuye">
+					<!--<a class="mui-icon mui-action-menu mui-icon-contact mui-pull-right" href="#offCanvasSide" style="background:#DD524D;"></a>-->
+					<a href="sousou.html"><span class="mui-icon mui-action-menu mui-icon-search mui-pull-left" style="background:#DD524D;"></span></a>
+					<h1 class="mui-title" style="color: #000000;font-size: 20px;">心  阅</h1>
+				</header>
+				<header class="mui-bar mui-bar-nav mui-hidden" style="background-color:#EB413D" id="tou">
+					<h1 class="mui-title" style="color: #000000;font-size: 20px;">心阅头条</h1>
+				</header>
+				<header class="mui-bar mui-bar-nav mui-hidden" style="background-color:#EB413D" id="dingyue">
+					<h1 class="" style="line-height: 55px; color: #000000;font-size: 20px;">订阅圈</h1>
+				</header>
+				<header class="mui-bar mui-bar-nav mui-hidden" style="background-color:#EB413D" id="qinxi">
+					<a class="mui-icon mui-action-menu mui-icon-contact mui-pull-right" href="#offCanvasSide" style="background:#DD524D;"></a>
+					<h1 class="mui-title" style="color: #000000;font-size: 20px;">心阅 亲兮</h1>
+				</header>
+
+				<div class="mui-content mui-scroll-wrapper" style="background: #E9E9E9;">
+					<div class="mui-scroll">
+						<!-- 主界面具体展示内容 -->
+						<div class="mui-control-content mui-active" id="a">
+							<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+								<div class="mui-scroll">
+									<a class="mui-control-item mui-active" href="#item1">
+										热点
+									</a>
+									<a class="mui-control-item" href="#item2">
+										排行
+									</a>
+									<a class="mui-control-item" href="#item3">
+										社会
+									</a>
+									<a class="mui-control-item" href="#item4">
+										图片
+									</a>
+									<a class="mui-control-item" href="#item5">
+										娱乐
+									</a>
+									<a class="mui-control-item">
+										科技
+									</a>
+									<a class="mui-control-item">
+										世界
+									</a>
+									<a class="mui-control-item">
+										体育
+									</a>
+									<a class="mui-control-item">
+										军事
+									</a>
+								</div>
+							</div>
+
+							<div class="mui-control-content mui-active" id="item1">
+								<br />
+								<h4>心阅独家:</h4>
+								<br />
+								<div class="mui-slider">
+									<div class="mui-slider-group mui-slider-loop">
+
+										<div class="mui-slider-item mui-slider-item-duplicate">
+											<a href="content.html"><img src="imges/l4.jpg" />
+												<p class="mui-slider-title">破旧的宿舍</p>
+											</a>
+										</div>
+										<div class="mui-slider-item">
+											<a href="content.html"><img src="imges/l2.jpg" />
+												<p class="mui-slider-title">上了985,211才知道读书无用论都是骗人的</p>
+											</a>
+										</div>
+										<div class="mui-slider-item">
+											<a href="content.html"><img src="imges/l1.jpg" />
+												<p class="mui-slider-title">孩子的哭泣</p>
+											</a>
+										</div>
+										<div class="mui-slider-item">
+											<a href="content.html"><img src="imges/l3.jpg" />
+												<p class="mui-slider-title">演唱会指南：衣服抛起来，荧光棒丢上来</p>
+											</a>
+										</div>
+										<div class="mui-slider-item">
+											<a href="#"><img src="imges/l4.jpg" />
+												<p class="mui-slider-title">破旧的宿舍</p>
+											</a>
+										</div>
+										<div class="mui-slider-item mui-slider-item-duplicate">
+											<a href="content.html"><img src="imges/l2.jpg" />
+												<p class="mui-slider-title">上了985,211才知道读书无用论都是骗人的</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="mui-card">
+									<!--页眉，放置标题-->
+									<div class="mui-card-header">美澳新三国战舰在珊瑚海组成庞大编队训练</div>
+									<!--内容区-->
+									<div class="mui-card-content">
+										<a href="http://war.163.com/photoview/4T8E0001/2267935.html#p=CQ495A864T8E0001">
+											<img src="imges/c1.jpg" width="100%" height="100%" /> </a>
+									</div>
+									<!--页脚，放置补充信息或支持的操作-->
+									<div class="mui-card-footer">新闻热点
+										<span class="mui-badge mui-badge-warning mui-badge-inverted">1995 跟帖</span>
+									</div>
+
+								</div>
+								<div class="mui-card">
+									<!--页眉，放置标题-->
+									<div class="mui-card-header">和外国年轻人相比，中国95后更相信努力就能成功</div>
+									<!--内容区-->
+									<div class="mui-card-content">
+										<div class="mui-row  mui-grid-12">
+											<div class="mui-col-sm-4 mui-col-xs-4" style="padding-right: 10px; padding-left: 10px;">
+
+												<a href="content.html">
+													<img src="imges/ca1.jpg" width="100px" height="100%" />
+												</a>
+
+											</div>
+											<div class="mui-col-sm-4 mui-col-xs-4" style="padding-right: 10px;">
+
+												<a href="#">
+													<img src="imges/ca2.jpg" width="100px" height="100%" />
+												</a>
+
+											</div>
+											<div class="mui-col-sm-4 mui-col-xs-4" style="padding-right: 10px;">
+
+												<a href="content.html">
+													<img src="imges/ca3.jpg" width="100px" height="100%" />
+												</a>
+
+											</div>
+										</div>
+
+									</div>
+									<!--页脚，放置补充信息或支持的操作-->
+									<div class="mui-card-footer"><span class="mui-icon  iconfont icon-dujia"> 社会 年轻人</span>
+										<p></p>
+										<span class="mui-badge mui-badge-warning mui-badge-inverted">2 跟帖</span>
+									</div>
+
+								</div>
+								<div class="mui-card">
+									<!--页眉，放置标题-->
+									<div class="mui-card-header">中国最缺的不是一流大学，是合格父母</div>
+									<!--内容区-->
+									<div class="mui-card-content">
+										<div class="mui-row  mui-grid-12">
+											<div class="mui-col-sm-4 mui-col-xs-4" style="padding-right: 10px; padding-left: 10px;">
+
+												<a href="content.html">
+													<img src="imges/cb1.jpg" width="100px" height="100%" />
+												</a>
+
+											</div>
+											<div class="mui-col-sm-4 mui-col-xs-4" style="padding-right: 10px;">
+
+												<a href="content.html">
+													<img src="imges/cb2.jpg" width="100px" height="100%" />
+												</a>
+
+											</div>
+											<div class="mui-col-sm-4 mui-col-xs-4" style="padding-right: 10px;">
+
+												<a href="content.html">
+													<img src="imges/cb3.jpg" width="100px" height="100%" />
+												</a>
+
+											</div>
+										</div>
+
+									</div>
+									<!--页脚，放置补充信息或支持的操作-->
+									<div class="mui-card-footer"><span class="mui-icon  iconfont icon-dujia"> 父母 子女</span>
+										<p></p>
+										<span class="mui-badge mui-badge-danger">45 跟帖</span>
+									</div>
+
+								</div>
+
+								<br /><br /><br />
+
+							</div>
+
+							<div class="mui-control-content" id="item2">
+								<div>
+									<h5 style="background-color:#efeff4">全站24小时点击榜<span style="float: right;">点击数</span></h5></div>
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted mui-badge-warning">13213123</span>解锁更多可能 山路试驾阿尔法·罗密欧Stelvi</li>
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted mui-badge-warning">4322131</span>男孩下河游泳被误当成鱼被鱼叉插死?真相竟是这样</li>
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted mui-badge-warning">1322131</span>揭秘印度"圣女" 高僧免费享用的性奴</li>
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted ">322131</span>陕西子洲县:清水沟水库不是溃堤是决口 水基本流完</li>
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted ">22131</span>全国97个县市最高温达40℃ 背后究竟是啥在作怪</li>
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted ">17123</span>刘晓宇女友晒近照粉丝聚焦一点 网友:胸就比我沉</li>
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted ">5312</span>上了985、211才知道，读书无用论都是骗人的</li>
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted ">3212</span>26名城管殴打一兼职学生 致其颅内出血</li>
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted ">1111</span>父亲住楼道外女儿却希望不相往来 网友评论戳泪点</li>
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted ">713</span>善心汇公司张天明等人涉嫌传销等犯罪被依法</li>
+								</ul>
+
+								<div>
+									<h5 style="background-color:#efeff4">跟帖榜<span style="float: right;">点击数</span></h5></div>
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted mui-badge-warning">3123</span>三月的烟雨飘摇的南方</li>
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted mui-badge-warning">1231</span>你坐在你空空的米店</li>
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted mui-badge-warning">789</span>你一手拿着苹果</li>
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted ">412</span>一手拿着命运</li>
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted ">312</span>在寻找你自己的香</li>
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted ">121</span>窗外的人们匆匆忙忙</li>
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted ">54</span>把眼光丢在潮湿的路上</li>
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted ">32</span>你的舞步划过空空的房间</li>
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted ">21</span>米店</li>
+									<li class="mui-table-view-cell"><span class="mui-badge mui-badge-inverted ">12</span>郭炜炜</li>
+								</ul>
+
+								<br /><br />
+
+							</div>
+							<div class="mui-control-content" id="item3">
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell mui-media">
+										<a href="javascript:;">
+											<img class="mui-media-object mui-pull-left" src="imges/sh1.jpg">
+											<div class="mui-media-body">
+												幸福
+												<p class="mui-ellipsis">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+											</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell mui-media">
+										<a href="javascript:;">
+											<img class="mui-media-object mui-pull-left" src="imges/sh2.jpg">
+											<div class="mui-media-body">
+												木屋
+												<p class="mui-ellipsis">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+											</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell mui-media">
+										<a href="javascript:;">
+											<img class="mui-media-object mui-pull-left" src="imges/sh2.jpg">
+											<div class="mui-media-body">
+												CBD
+												<p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+
+								<div class="mui-card">
+									<!--页眉，放置标题-->
+									<div class="mui-card-header">萌！俄罗斯一航空公司飞机变身哈士奇</div>
+									<!--内容区-->
+									<div class="mui-card-content">
+										<div class="mui-row  mui-grid-12">
+											<div class="mui-col-sm-4 mui-col-xs-4" style="padding-right: 10px; padding-left: 10px;">
+
+												<a href="http://data.163.com/17/0725/16/CQ72IM13000181IU.html">
+													<img src="imges/0.jpg" width="100px" height="100%" />
+												</a>
+
+											</div>
+											<div class="mui-col-sm-4 mui-col-xs-4" style="padding-right: 10px;">
+
+												<a href="http://data.163.com/17/0725/16/CQ72IM13000181IU.html">
+													<img src="imges/0 (1).jpg" width="100px" height="100%" />
+												</a>
+
+											</div>
+											<div class="mui-col-sm-4 mui-col-xs-4" style="padding-right: 10px;">
+
+												<a href="http://data.163.com/17/0725/16/CQ72IM13000181IU.html">
+													<img src="imges/0 (2).jpg" width="100px" height="100%" />
+												</a>
+
+											</div>
+										</div>
+
+									</div>
+									<!--页脚，放置补充信息或支持的操作-->
+									<div class="mui-card-footer"><span class="mui-icon  iconfont icon-dujia"> 飞机 航空</span>
+										<p></p>
+										<span class="mui-badge mui-badge-warning mui-badge-inverted">520跟帖</span>
+									</div>
+
+								</div>
+
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell mui-media">
+										<a href="javascript:;">
+											<img class="mui-media-object mui-pull-left" src="imges/sh1.jpg">
+											<div class="mui-media-body">
+												男子吵架后跳下长江大桥 家人江中搜寻多日盼奇迹
+												<p class="mui-ellipsis">社会 长江</p>
+											</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell mui-media">
+										<a href="javascript:;">
+											<img class="mui-media-object mui-pull-left" src="imges/sh2.jpg">
+											<div class="mui-media-body">
+												男孩被公交车碾压 数十人用＂洪荒之力＂抬车救人
+												<p class="mui-ellipsis">交通事故</p>
+											</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell mui-media">
+										<a href="javascript:;">
+											<img class="mui-media-object mui-pull-left" src="imges/sh3.jpg">
+											<div class="mui-media-body">
+												两人车祸后被压在车下 路人合力20秒抬车救人
+												<p class="mui-ellipsis">车祸 抬车救人</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+								<br /><br />
+							</div>
+							<div class="mui-control-content" id="item4">
+								<div class="mui-slider-item mui-slider-item-duplicate" style="width: 80%;margin-left: 15px;">
+									<a href="#"><img src="imges/tu1.jpg" />
+
+									</a>
+								</div>
+
+								<div class="mui-slider-item mui-slider-item-duplicate" style="width: 80%;margin-left: 15px;">
+									<a href="#"><img src="imges/tu2.jpg" />
+										<p class="mui-slider-title">警察执法被砍 输血感染乙肝</p>
+									</a>
+								</div>
+								<a href="#" style="margin: auto;" class="btn_href">查看更多图片>></a>
+							</div>
+							<!--<div class="mui-control-content" id="item5">
+				        <div class="mui-title">下拉加载更多数据--》</div>
+						
+									<div class="mui-scroll">
+								
+										
+										<ul class="mui-table-view mui-table-view-chevron" id="shuaxin">
+                    <p>下拉加载更多数据</p>
+										</ul>
+									</div>
+								</div>-->
+
+				
+
+						</div>
+
+						<div class="mui-control-content" id="b">
+							<ul class="mui-table-view mui-table-view-chevron">
+								<li id="switch" class="mui-table-view-cell">
+									换一换 ：不一样的头条
+									<button type="button" class="mui-btn mui-btn-danger">换一换</button>
+								</li>
+							</ul>
+							<div id="slider" class="mui-slider">
+								<div class="mui-slider-group mui-slider-loop">
+									<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+									<div class="mui-slider-item mui-slider-item-duplicate">
+										<a href="#">
+											<img src="imges/ll4.jpg" width="100px" height="300px">
+										</a>
+									</div>
+									<!-- 第一张 -->
+									<div class="mui-slider-item">
+										<a href="#">
+											<img src="imges/ll1.jpg" width="100px" height="300px">
+										</a>
+									</div>
+
+									<div class="mui-slider-item">
+										<a href="#">
+											<img src="imges/ll3.jpg" width="100px" height="300px">
+										</a>
+									</div>
+									<!-- 第二张 -->
+									<div class="mui-slider-item">
+										<a href="#">
+											<img src="imges/ll4.jpg" width="100px" height="300px">
+										</a>
+									</div>
+
+									<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+									<div class="mui-slider-item mui-slider-item-duplicate">
+										<a href="#">
+											<img src="imges/ll1.jpg" width="100px" height="300px">
+										</a>
+									</div>
+								</div>
+								<div class="mui-slider-indicator">
+									<div class="mui-indicator mui-active"></div>
+									<div class="mui-indicator"></div>
+									<div class="mui-indicator"></div>
+
+								</div>
+							</div>
+
+							<div class="box_163css">
+								<div class="top_box">
+									<ul class="nav_top">
+										<li class="on">独家</li>
+										<li>要闻</li>
+										<li>陆良</li>
+										<li>社会</li>
+									</ul>
+									<span class="line"></span>
+								</div>
+								<div class="nav_mid">
+									<div id="box" class="box01">
+										<ul class="newlist">
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="http://news.163.com/photoview/00AP0001/2268220.html">陕西中部遭遇特大暴雨袭击 有水库决堤</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#a">美共和党废除奥巴马医改失败 9名共和党人＂倒戈＂</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#a">在唱安逸</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#a">找不到人来讲喽</a>
+											</li>
+										</ul>
+										<a href="#a" class="btn_href">前往新闻中心查看更多>></a>
+									</div>
+									<div id="box" class="box01">
+										<ul class="newlist">
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">三月的烟雨飘摇</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">你坐在空空的米店</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">一手拿着苹果</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">一首拿着命运</a>
+											</li>
+										</ul>
+										<a href="http://www.163css.com/js06.html" class="btn_href">前往新闻中心查看更多>></a>
+									</div>
+									<div id="box" class="box01">
+										<ul class="newlist">
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">在冬天和爷爷一起晒太阳</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">我的心情就像身上的棉衣赏</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">如果我们能到集市上逛一逛啊</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#a">妈妈做的饭是什么这么香</a>
+											</li>
+										</ul>
+										<a href="#a" class="btn_href">前往新闻中心查看更多>></a>
+									</div>
+									<div id="box" class="box01">
+										<ul class="newlist">
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">三月的烟雨飘摇</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">你坐在空空的米店</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">一手拿着苹果</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">一首拿着命运</a>
+											</li>
+										</ul>
+										<a href="#a" class="btn_href">前往新闻中心查看更多>></a>
+									</div>
+								</div>
+							</div>
+							<div class="box_163css">
+								<div class="top_box">
+									<ul class="nav_top">
+										<li class="on">国内</li>
+										<li>独家</li>
+										<li>军事</li>
+										<li>财经</li>
+									</ul>
+									<span class="line"></span>
+								</div>
+								<div class="nav_mid">
+									<div id="box" class="box01">
+										<ul class="newlist">
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">三月的烟雨飘摇</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">你坐在空空的米店</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">一手拿着苹果</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">一首拿着命运</a>
+											</li>
+										</ul>
+										<a href="#" class="btn_href">前往新闻中心查看更多>></a>
+									</div>
+									<div id="box" class="box01">
+										<ul class="newlist">
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">越过山丘</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">遇到19岁的我</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">戴着一双白手套</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">喝着我的喜酒</a>
+											</li>
+										</ul>
+										<a href="#" class="btn_href">前往新闻中心查看更多>></a>
+									</div>
+									<div id="box" class="box01">
+										<ul class="newlist">
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">他问我幸福与否</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">是否永别了忧愁</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">为何婚礼上那么多人</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">没有一个当年的朋友</a>
+											</li>
+										</ul>
+										<a href="#" class="btn_href">前往新闻中心查看更多>></a>
+									</div>
+									<div id="box" class="box01">
+										<ul class="newlist">
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">越过山丘</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">遇见60岁的我</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">拄着一根白手杖</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">在听鸟儿歌唱</a>
+											</li>
+										</ul>
+										<a href="#" class="btn_href">前往新闻中心查看更多>></a>
+									</div>
+								</div>
+							</div>
+							<div class="box_163css">
+								<div class="top_box">
+									<ul class="nav_top">
+										<li class="on">汽车</li>
+										<li>房产</li>
+										<li>航空</li>
+										<li>健康</li>
+									</ul>
+									<span class="line"></span>
+								</div>
+								<div class="nav_mid">
+									<div id="box" class="box01">
+										<ul class="newlist">
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">在冬天和爷爷一起晒太阳</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">我的心情就像身上的棉衣赏</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">如果我们能到集市上逛一逛啊</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#a">妈妈做的饭是什么这么香</a>
+											</li>
+										</ul>
+										<a href="#a" class="btn_href">前往新闻中心查看更多>></a>
+									</div>
+									<div id="box" class="box01">
+										<ul class="newlist">
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">就让我随你去</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">让我随你去</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">随着熙熙攘攘的人流</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#a">向着开满鲜花的山丘</a>
+											</li>
+										</ul>
+										<a href="#a" class="btn_href">前往新闻中心查看更多>></a>
+									</div>
+									<div id="box" class="box01">
+										<ul class="newlist">
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">在冬天和爷爷一起晒太阳</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">我的心情就像身上的棉衣赏</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">如果我们能到集市上逛一逛啊</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#a">妈妈做的饭是什么这么香</a>
+											</li>
+										</ul>
+										<a href="#a" class="btn_href">前往新闻中心查看更多>></a>
+									</div>
+									<div id="box" class="box01">
+										<ul class="newlist">
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">陆良</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">中枢</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#">西桥</a>
+											</li>
+											<li><em class="em_arrow">&nbsp;</em>
+												<a href="#a">越过山丘</a>
+											</li>
+										</ul>
+										<a href="#a" class="btn_href">前往新闻中心查看更多>></a>
+
+									</div>
+
+								</div>
+							</div>
+							<br /><br />
+						</div>
+
+						<div class="mui-control-content " id="c">
+							<div class="mui-segmented-control ">
+								<a class="mui-control-item mui-active" href="#di1">已订阅栏目</a>
+								<a class="mui-control-item " href="#di2">动态圈</a>
+							</div>
+							<div class="mui-control-content mui-active" id="di1">
+
+								<li class="mui-table-view-cell mui-collapse">
+
+									<a class="mui-navigate-right" href="#"><span class="mui-icon  iconfont icon-lanmusousuo"></span> 查找栏目</a>
+
+									<div class="mui-collapse-content">
+										<form class="mui-input-group">
+											<div class="mui-input-row">
+												<label>搜索</label>
+												<input type="text" class="mui-input-clear" placeholder="请输入想查找的栏目">
+											</div>
+
+											<div class="mui-input-row mui-plus-hidden">
+												<label>语音搜索</label>
+												<input type="text" class="mui-input-speech mui-input-clear" placeholder="语音输入">
+											</div>
+											<div class="mui-button-row">
+												<button class="mui-btn mui-btn-primary" type="button" onclick="return false;">确认</button>&nbsp;&nbsp;
+												<button class="mui-btn mui-btn-primary" type="button" onclick="return false;">取消</button>
+											</div>
+										</form>
+									</div>
+								</li>
+
+								<div id="slider" class="mui-slider">
+									<div class="mui-slider-group mui-slider-loop">
+										<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+										<div class="mui-slider-item mui-slider-item-duplicate">
+											<ul class="mui-table-view mui-grid-view mui-grid-9">
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon  iconfont icon-tiyu"><span class="mui-badge mui-badge-red">5</span></span>
+														<div class="mui-media-body">体育</div>
+													</a>
+												</li>
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon iconfont icon-socialcontant-alt"></span>
+														<div class="mui-media-body">社会</div>
+													</a>
+												</li>
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon iconfont icon-it"></span>
+														<div class="mui-media-body">IT</div>
+													</a>
+												</li>
+
+											</ul>
+
+											<ul class="mui-table-view mui-grid-view mui-grid-9">
+
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon mui-icon-rili iconfont icon-yishu"></span>
+														<div class="mui-media-body">艺术</div>
+													</a>
+												</li>
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon  iconfont icon-web"><span class="mui-badge mui-badge-red">5</span></span>
+														<div class="mui-media-body">web</div>
+													</a>
+												</li>
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon  iconfont icon-php"><span class="mui-badge mui-badge-red">5</span></span>
+														<div class="mui-media-body">php</div>
+													</a>
+												</li>
+
+											</ul>
+										</div>
+										<!-- 第一张 -->
+										<div class="mui-slider-item">
+											<ul class="mui-table-view mui-grid-view mui-grid-9">
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon mui-icon-rili iconfont icon-junshi"></span>
+														<div class="mui-media-body">nodejs</div>
+													</a>
+												</li>
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon  iconfont icon-gongyi01"><span class="mui-badge mui-badge-red">5</span></span>
+														<div class="mui-media-body">公益</div>
+													</a>
+												</li>
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon mui-icon-rili iconfont icon-js"></span>
+														<div class="mui-media-body">js</div>
+													</a>
+												</li>
+
+											</ul>
+											<ul class="mui-table-view mui-grid-view mui-grid-9">
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon iconfont icon-Kunming_Metro_Logo"></span>
+														<div class="mui-media-body">昆明</div>
+													</a>
+												</li>
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon mui-icon-rili iconfont icon-lvyou"></span>
+														<div class="mui-media-body">旅游</div>
+													</a>
+												</li>
+
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon  iconfont icon-lanmuzengjia"><span class="mui-badge mui-badge-red">5</span></span>
+														<div class="mui-media-body">添加</div>
+													</a>
+												</li>
+											</ul>
+
+										</div>
+
+										<!-- 第二张 -->
+										<div class="mui-slider-item">
+											<ul class="mui-table-view mui-grid-view mui-grid-9">
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon  iconfont icon-tiyu"><span class="mui-badge mui-badge-red">5</span></span>
+														<div class="mui-media-body">体育</div>
+													</a>
+												</li>
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon iconfont icon-socialcontant-alt"></span>
+														<div class="mui-media-body">社会</div>
+													</a>
+												</li>
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon iconfont icon-it"></span>
+														<div class="mui-media-body">IT</div>
+													</a>
+												</li>
+
+											</ul>
+
+											<ul class="mui-table-view mui-grid-view mui-grid-9">
+
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon mui-icon-rili iconfont icon-yishu"></span>
+														<div class="mui-media-body">艺术</div>
+													</a>
+												</li>
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon  iconfont icon-web"><span class="mui-badge mui-badge-red">5</span></span>
+														<div class="mui-media-body">web</div>
+													</a>
+												</li>
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon  iconfont icon-php"><span class="mui-badge mui-badge-red">5</span></span>
+														<div class="mui-media-body">php</div>
+													</a>
+												</li>
+
+											</ul>
+										</div>
+
+										<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+										<div class="mui-slider-item mui-slider-item-duplicate">
+											<ul class="mui-table-view mui-grid-view mui-grid-9">
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon mui-icon-rili iconfont icon-junshi"></span>
+														<div class="mui-media-body">nodejs</div>
+													</a>
+												</li>
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon  iconfont icon-gongyi01"><span class="mui-badge mui-badge-red">5</span></span>
+														<div class="mui-media-body">公益</div>
+													</a>
+												</li>
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon mui-icon-rili iconfont icon-js"></span>
+														<div class="mui-media-body">js</div>
+													</a>
+												</li>
+
+											</ul>
+											<ul class="mui-table-view mui-grid-view mui-grid-9">
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon iconfont icon-Kunming_Metro_Logo"></span>
+														<div class="mui-media-body">昆明</div>
+													</a>
+												</li>
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon mui-icon-rili iconfont icon-lvyou"></span>
+														<div class="mui-media-body">旅游</div>
+													</a>
+												</li>
+
+												<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+													<a href="#">
+														<span class="mui-icon  iconfont icon-lanmuzengjia"><span class="mui-badge mui-badge-red">5</span></span>
+														<div class="mui-media-body">添加</div>
+													</a>
+												</li>
+
+											</ul>
+										</div>
+									</div>
+
+									<div class="mui-slider-indicator">
+										<div class="mui-indicator mui-active"></div>
+										<div class="mui-indicator"></div>
+									</div>
+								</div>
+
+								<br />
+								<h5 style="background-color:#efeff4">慢生活</h5>
+								<ul class="mui-table-view mui-grid-view">
+									<li class="mui-table-view-cell mui-media mui-col-xs-6">
+										<a href="#">
+											<img class="mui-media-object" src="imges/fj4.jpg">
+											<div class="mui-media-body">幸福就是可以一起睡觉</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-6">
+										<a href="#">
+											<img class="mui-media-object" src="imges/fj5.jpg">
+											<div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-6">
+										<a href="#"><img class="mui-media-object" src="imges/fj3.jpg">
+											<div class="mui-media-body">Color of SIP CBD</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-6">
+										<a href="#">
+											<img class="mui-media-object" src="imges/fengjing2.jpg">
+											<div class="mui-media-body">静静看这世界</div>
+										</a>
+									</li>
+								</ul>
+								<br />
+								<h5 style="background-color:#efeff4">社会</h5>
+								<ul class="mui-table-view mui-grid-view">
+									<li class="mui-table-view-cell mui-media mui-col-xs-6">
+										<a href="#">
+											<img class="mui-media-object" src="imges/d1.jpg">
+											<div class="mui-media-body">洪水泛滥</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-6">
+										<a href="#">
+											<img class="mui-media-object" src="imges/d2.jpg">
+											<div class="mui-media-body">想要一间这样的木屋，静静的被淹</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-6">
+										<a href="#"><img class="mui-media-object" src="imges/d3.jpg">
+											<div class="mui-media-body">民众很伤心</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-6">
+										<a href="#">
+											<img class="mui-media-object" src="imges/fengjing1.jpg">
+											<div class="mui-media-body">静静看这世界</div>
+										</a>
+									</li>
+								</ul>
+								<br />
+								<br />
+							</div>
+							<div class="mui-control-content" id="di2">
+								<h5 style="background-color:#efeff4">美文</h5>
+								<div class="mui-card">
+									<div class="mui-card-header mui-card-media mui-card-media" style="height:40vw;background-image:url(imges/lx2.jpg)">
+										<img src="xinyue.jpg" />
+										<div class="mui-media-body">
+											李鑫
+											<p>发表于 2016-03-1 15:30</p>
+										</div>
+										<!--<img class="mui-pull-left" src="../images/logo.png" width="34px" height="34px" />
+					<h2>小M</h2>
+					<p>发表于 2016-06-30 15:30</p>-->
+									</div>
+									<div class="mui-card-content">
+										生命中，总有许许多多的瞬间让我们感但到一股暖流流入我们的心中。而这感动往往来自于细节。
+										<br /> 让我们一同阅读，一同感悟，这来自与文字中的那些美。那些，生活中与我们相关联的美好。
+										<br /> 希望所有的三月都这么美好，希望所有的明天都即将来临。
+
+									</div>
+									<div class="mui-card-footer">
+										<a class="mui-card-link">喜欢
+											<span class="mui-icon  iconfont icon-xihuan">  <span class="mui-badge mui-badge-red">225</span></span>
+										</a>
+										<a class="mui-card-link">评论(123)</a>
+										<a class="mui-card-link">阅读更多》</a>
+									</div>
+								</div>
+								<div class="mui-card">
+									<div class="mui-card-header mui-card-media mui-card-media" style="height:40vw;background-image:url(imges/xxx2.jpg)">
+										<img src="imges/ll1.jpg" />
+										<div class="mui-media-body">
+											李鑫
+											<p>发表于 2016-03-1 15:30</p>
+										</div>
+										<!--<img class="mui-pull-left" src="../images/logo.png" width="34px" height="34px" />
+					<h2>小M</h2>
+					<p>发表于 2016-06-30 15:30</p>-->
+									</div>
+									<div class="mui-card-content">
+										快到飞往巴黎的航班的登机口时，我们从一路飞奔变为一溜小跑。飞机尚未起飞，但登机通道已经关闭。登机口的工作人员正在平静地整理着票根。登机口到机舱口之间的登机桥已被收起。 “等等，我们还没登机！”我喘着气喊道。 “抱歉，”登机口工作人员说，“登机时间已过。” “可我们的转乘航班10分钟前才刚到。他们答应我们会提前打电话通知登机口的。” “抱歉，登机口一旦关闭，任何人都不能登机。”
+
+									</div>
+									<div class="mui-card-footer">
+										<a class="mui-card-link">喜欢
+											<span class="mui-icon  iconfont icon-xihuan">  <span class="mui-badge mui-badge-red">1995</span></span>
+										</a>
+										<a class="mui-card-link">评论(321)</a>
+										<a class="mui-card-link">阅读更多》</a>
+									</div>
+								</div><br />
+								<br />
+
+							</div>
+
+						</div>
+
+						<!--background: url(imges/dddd.jpg);-->
+						<div class="mui-control-content " id="d">
+							<div style="width: 100%; height: 150px;background-color: #EB413D; ">
+								<br />
+
+								<button type="button" class="mui-btn" style="border-radius:70%;float:right;" id="qiandao">签到</button>
+								<a href="login.html"><button type="button" class="mui-btn" style="width: 150px;">登录</button></a>
+
+								<br />
+								<a href="reg.html">
+									<p style="color: azure;">手机号快速注册></p>
+								</a>
+
+								<div class="mui-row" style="color: #F1F2F3;">
+									<div class="mui-col-sm-4 mui-col-xs-4">
+										<span class="mui-icon mui-icon-weixin"></span> 微信登录
+									</div>
+									<div class="mui-col-sm-4 mui-col-xs-4">
+										<span class="mui-icon mui-icon-weixin"></span> QQ登录
+									</div>
+
+									<div class="mui-col-sm-4 mui-col-xs-4">
+										<span class="mui-icon mui-icon-weixin"></span>微博登录
+									</div>
+								</div>
+							</div>
+
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right"><img src="imges/xiaoxi (1).png" />&nbsp;我的消息
+									<p style="float: right;">评论、跟帖、通知</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right"><img src="imges/dong.png" />&nbsp;最新动态</a>
+							</li>
+							<br />
+							<ul>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right"><img src="imges/jinbi.png" />&nbsp;金币商城</a>
+								</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right"><img src="imges/qian.png" />&nbsp;我的钱包</a>
+								</li>
+							</ul>
+							<hr />
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="main.html"><img src="imges/ss (2).png" />&nbsp;设置锁屏手势登录</a>
+							</li>
+                          <li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="">体会不一样的心阅</a>
+							</li>
+							<!--<div style="width: 100%; height: 150px;background: url(imges/dddd.jpg); ">
+
+							</div>-->
+
+						</div>
+						
+						
+						
+					</div>
+				</div>
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+
+			<nav class="mui-bar mui-bar-tab" style="background-color: #EB413D">
+				<a class="mui-tab-item mui-active" href="#a" id="shou">
+					<span class="mui-icon  iconfont icon-shouye"></span>
+					<span class="mui-tab-label">首页</span>
+				</a>
+				<a class="mui-tab-item" href="#b" id="toutiao">
+					<span class="mui-icon  iconfont icon-dutoutiao"></span>
+					<span class="mui-tab-label">头条</span>
+				</a>
+				<a class="mui-tab-item" href="#c" id="ding">
+					<span class="mui-icon  iconfont icon-dingyue"></span>
+					<span class="mui-tab-label">订阅</span>
+				</a>
+				<a class="mui-tab-item" href="#d" id="wo">
+					<span class="mui-icon  iconfont icon-wode-"></span>
+					<span class="mui-tab-label">我</span>
+				</a>
+			</nav>
+
+		</div>
+
+		<script type="text/javascript" src="js/swiper-3.4.2.min.js"></script>
+		<script type="text/javascript" src="js/swiper.animate1.0.2.min.js"></script>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init()
+
+			document.getElementById("qiandao").addEventListener('tap', function() {
+				mui.alert('恭喜签到成功', '谢谢使用', function() {
+
+				});
+			});
+			//可以滚动
+			(function($) {
+				$(".mui-scroll-wrapper").scroll({
+					bounce: false, //滚动条是否有弹力默认是true
+					indicators: false, //是否显示滚动条,默认是true
+				});
+			})(mui);
+
+			//获得slider插件对象
+			var gallery = mui('.mui-slider');
+			gallery.slider({
+				interval: 2000 //自动轮播周期，若为0则不自动播放，默认为0；
+			});
+
+			var tabtou = document.getElementById("toutiao");
+			var tabshou = document.getElementById("shou");
+			var tabding = document.getElementById("ding");
+			var tabwo = document.getElementById("wo");
+
+			//监听点击事件
+			var zhuye = document.getElementById("zhuye");
+			var dingyue = document.getElementById("dingyue");
+			var qinxi = document.getElementById("qinxi");
+			var tou = document.getElementById("tou");
+			tabshou.addEventListener("tap", function() {
+				//     console.log("tap event trigger");
+
+				tou.classList.add("mui-hidden");
+				dingyue.classList.add("mui-hidden");
+				qinxi.classList.add("mui-hidden");
+				zhuye.classList.remove("mui-hidden");
+			});
+			tabtou.addEventListener("tap", function() {
+				//     console.log("tap event trigger");
+
+				zhuye.classList.add("mui-hidden");
+				dingyue.classList.add("mui-hidden");
+				qinxi.classList.add("mui-hidden");
+				tou.classList.remove("mui-hidden");
+			});
+			tabding.addEventListener("tap", function() {
+				//     console.log("tap event trigger");
+
+				zhuye.classList.add("mui-hidden");
+				tou.classList.add("mui-hidden");
+				qinxi.classList.add("mui-hidden");
+				dingyue.classList.remove("mui-hidden");
+			});
+			tabwo.addEventListener("tap", function() {
+				console.log("tap event trigger");
+
+				zhuye.classList.add("mui-hidden");
+				dingyue.classList.add("mui-hidden");
+				tou.classList.add("mui-hidden");
+				qinxi.classList.remove("mui-hidden");
+			});
+		</script>
+
+		<script type="text/javascript">
+			//头条列表
+			$(function() {
+				var len = 0;
+				var f = 0;
+				var cq = 0;
+				$('.nav_top li').tap(function() {
+					var t = $(this).index();
+					var wh = $('.line').width();
+					f = -25 * t + "%";
+					cq = 100 * t + "%";
+					$(this).parents('.box_163css').find('.nav_mid').css({
+						'-webkit-transform': 'translate(' + f + ')',
+						'-webkit-transition': '500ms linear'
+					});
+					$(this).parents('.box_163css').find('.line').css({
+						'-webkit-transform': 'translate(' + cq + ')',
+						'-webkit-transition': '300ms linear'
+					});
+					$(this).siblings().removeClass('on');
+					$(this).addClass('on');
+				})
+				$('.box01').swipeLeft(function() {
+					var i = $(this).index() + 1;
+					len = -25 * i + "%";
+					cq = 100 * i + "%";
+					if(i == 4) {
+						return false
+					} else {
+						$(this).parent('.nav_mid').css({
+							'-webkit-transform': 'translate(' + len + ')',
+							'-webkit-transition': '500ms linear'
+						});
+						$(this).parents('.box_163css').find('.line').css({
+							'-webkit-transform': 'translate(' + cq + ')',
+							'-webkit-transition': '500ms linear'
+						});
+						$(this).parents('.box_163css').find('.nav_top li').eq(i).siblings().removeClass('on');
+						$(this).parents('.box_163css').find('.nav_top li').eq(i).addClass('on');
+					}
+				})
+				$('.box01').swipeRight(function() {
+					var i = $(this).index();
+					if(i == 0) {
+						return false
+					} else {
+						var n = i - 1;
+						len = -25 * n + "%";
+						cq = 100 * n + "%";
+						$(this).parents('.box_163css').find('.nav_mid').css({
+							'-webkit-transform': 'translate(' + len + ')',
+							'-webkit-transition': '500ms linear'
+						});
+						$(this).parents('.box_163css').find('.line').css({
+							'-webkit-transform': 'translate(' + cq + ')',
+							'-webkit-transition': '500ms linear'
+						});
+						$(this).parents('.box_163css').find('.nav_top li').eq(i - 1).siblings().removeClass('on');
+						$(this).parents('.box_163css').find('.nav_top li').eq(i - 1).addClass('on');
+					}
+				})
+			})
+		</script>
+		<!--<script type="text/javascript">
+			mui.init({
+				pullRefresh: {
+					container: '#item5',
+					down: {
+						callback: pulldownRefresh
+					},
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			/**
+			 * 下拉刷新具体业务实现
+			 */
+			function pulldownRefresh() {
+				setTimeout(function() {
+					var table = document.body.querySelector('#shuaxin');
+					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					for (var i = cells.length, len = i + 3; i < len; i++) {
+						var li = document.createElement('li');
+						li.className = 'mui-table-view-cell';
+						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+						//下拉刷新，新纪录插到最前面；
+						table.insertBefore(li, table.firstChild);
+					}
+					mui('#item5').pullRefresh().endPulldownToRefresh(); //refresh completed
+				}, 1500);
+			}
+			var count = 0;
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+				setTimeout(function() {
+					mui('#item5').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+					var table = document.body.querySelector('#shuaxin');
+					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					for (var i = cells.length, len = i + 20; i < len; i++) {
+						var li = document.createElement('li');
+						li.className = 'mui-table-view-cell';
+						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+						table.appendChild(li);
+					}
+				}, 1500);
+			}
+			if (mui.os.plus) {
+				mui.plusReady(function() {
+					setTimeout(function() {
+						mui('#item5').pullRefresh().pullupLoading();
+					}, 1000);
+
+				});
+			} else {
+				mui.ready(function() {
+					mui('#item5').pullRefresh().pullupLoading();
+				});
+			}
+		</script>-->
+		
+		
+	</body>
+
+</html>
